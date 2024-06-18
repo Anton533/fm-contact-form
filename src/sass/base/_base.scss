@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #565656;
+  background-color: var(--color-body-bg);
+
+  &.scroll-disabled {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
