@@ -1,8 +1,56 @@
 @@include("header.html")
 
+<div class="container">
+    <section class="contact-us section">
+        <h3 class="contact-us__title">Contact Us</h3>
+
+        <form class="form">
+            <div class="form__name form-item">
+                <label class="form-label" for="field-1">First Name *</label>
+                <input class="form-input" type="text" id="field-1">
+            </div>
+
+            <div class="form__last">
+                <label class="form-label" for="field-2">Last Name *</label>
+                <input class="form-input" type="text" id="field-2">
+            </div>
+
+            <div class="form__email">
+                <label class="form-label" for="field-3">Email Address *</label>
+                <input class="form-input" type="text" id="field-3">
+            </div>
+
+            <div class="form__query">
+                <label class="form-label" for="field">Query Type *</label>
+
+                <input type="radio" id="field-4" name="query">
+                <label class="" for="field-4">General Enquiry</label>
+
+                <input type="radio" id="field-5" name="query">
+                <label class="" for="field-5">Support Request</label>
+            </div>
+
+            <div class="form__message">
+                <label class="form-label" for="message">Message *</label>
+                <textarea class="form-textarea" name="message" id="message" rows="4"></textarea>
+            </div>
+
+            <div class="form__consent">
+                <input type="checkbox" id="consent">
+                <label for="consent">
+                    I consent to being concacted by the team *
+                </label>
+            </div>
+            <div class="form__btn">
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+</div>
+
 <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Anton Omelianenko</a>.
 </div>
 
 @@include("footer.html")

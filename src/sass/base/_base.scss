@@ -9,8 +9,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
 body {
-  font-family: var(--font-text);
+  font-family: var(--font-family);
   font-size: 16px;
   text-align: center;
   line-height: 1.2;

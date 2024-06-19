@@ -1,0 +1,22 @@
+.form-input,
+.form-textarea {
+  font-family: inherit;
+  border-radius: 10px;
+  border: 1px solid var(--color-grey-medium);
+  background-color: #fff;
+  width: 100%;
+
+  padding: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  text-align: start;
+}
+
+.form-textarea {
+  line-height: inherit;
+
+  resize: none;
+}
