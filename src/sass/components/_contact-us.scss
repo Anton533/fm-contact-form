@@ -1,31 +1,56 @@
 .contact-us {
-  max-width: 800px;
-  min-height: 600px;
+  max-width: 736px;
   background-color: #fff;
   border-radius: 15px;
 
-  padding: 30px;
-  margin: 0 auto;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  margin: 32px auto;
+
+  @include respond(lg) {
+    padding-top: 38px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    margin: 128px auto;
+  }
 
   &__title {
-    font-size: 36px;
+    font-size: 32px;
     text-align: start;
+    letter-spacing: -1px;
     margin-bottom: 30px;
   }
 }
 
 .form {
   display: grid;
-  column-gap: 15px;
-  row-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
-    'name last'
+    'name name'
+    'last last'
     'email email'
     'query query'
     'message message'
     'consent consent'
     'btn btn';
+
+  @include respond(lg) {
+    column-gap: 15px;
+    row-gap: 26px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'name last'
+      'email email'
+      'query query'
+      'message message'
+      'consent consent'
+      'btn btn';
+  }
 }
 
 .form {
@@ -34,23 +59,121 @@
   }
   &__name {
     grid-area: name;
+    margin-bottom: 26px;
+    @include respond(lg) {
+      margin: 0;
+    }
   }
   &__last {
     grid-area: last;
+    margin-bottom: 26px;
+    @include respond(lg) {
+      margin: 0;
+    }
   }
   &__email {
     grid-area: email;
+    margin-bottom: 26px;
+    @include respond(lg) {
+      margin: 0;
+    }
   }
   &__query {
     grid-area: query;
+    margin-bottom: 10px;
   }
   &__message {
     grid-area: message;
+
+    margin-bottom: 38px;
+    @include respond(lg) {
+      margin-bottom: 12px;
+    }
   }
   &__consent {
     grid-area: consent;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    line-height: 1.5;
+
+    padding-right: 20px;
+    @include respond(lg) {
+      padding-right: 0;
+    }
+    input {
+      width: 23px;
+      height: 23px;
+      margin-left: 3px;
+      margin-right: 18px;
+      @include respond(lg) {
+        width: 18px;
+        height: 18px;
+        margin-left: 4px;
+        margin-right: 17px;
+      }
+    }
+    span {
+      margin-left: 0px;
+    }
   }
   &__btn {
     grid-area: btn;
+    margin-top: 38px;
+    @include respond(lg) {
+    }
+  }
+
+  &__query-inner {
+    @include respond(lg) {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    input {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__query-item {
+    display: flex;
+    align-items: center;
+
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1px solid var(--color-grey-medium);
+    background-color: #fff;
+    width: 100%;
+
+    padding-top: 14px;
+    padding-bottom: 13px;
+    padding-left: 26px;
+    padding-right: 15px;
+
+    margin-bottom: 16px;
+
+    @include respond(lg) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 26px;
+      padding-right: 15px;
+
+      margin-bottom: 20px;
+    }
+    &:hover {
+      border: 1px solid var(--color-green-medium);
+      cursor: pointer;
+    }
+
+    input {
+      margin-right: 14px;
+    }
+    label {
+      font-size: 18px;
+    }
+    input:checked {
+      background-color: red;
+    }
   }
 }

@@ -1,22 +1,74 @@
 .form-input,
 .form-textarea {
   font-family: inherit;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid var(--color-grey-medium);
   background-color: #fff;
   width: 100%;
+  transition: all 0.15s ease-in-out;
 
-  padding: 15px;
+  &:hover {
+    border: 1px solid var(--color-green-active);
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--color-green-active);
+  }
 }
 
-.form-label {
+.form-input {
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form-label,
+.form-label-v2 {
   display: block;
-  margin-bottom: 6px;
   text-align: start;
+}
+.form-label {
+  margin-bottom: 10px;
+}
+.form-label-v2 {
+  margin-bottom: 20px;
+  @include respond(lg) {
+    margin-bottom: 18px;
+  }
 }
 
 .form-textarea {
-  line-height: inherit;
-
+  line-height: 1.6;
   resize: none;
+
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  min-height: 240px;
+  @include respond(lg) {
+    min-height: auto;
+  }
+}
+
+label {
+  span {
+    margin-left: 5px;
+    color: var(--color-green-medium);
+  }
+}
+
+input,
+label {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+label {
+  user-select: none;
 }

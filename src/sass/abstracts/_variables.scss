@@ -2,12 +2,16 @@ $color-green-lighter: hsl(148, 38%, 91%);
 $color-green-medium: hsl(169, 82%, 27%);
 $color-red: hsl(0, 66%, 54%);
 $color-white: hsl(0, 0%, 100%);
-$color-grey-medium: hsl(186, 15%, 59%);
+$color-grey-medium: #959c99;
 $color-grey-darker: hsl(187, 24%, 22%);
+$color-green-darker: #103f36;
+$color-green-active: #6e9c90;
 
 :root {
   --color-green-lighter: #{$color-green-lighter};
   --color-green-medium: #{$color-green-medium};
+  --color-green-darker: #{$color-green-darker};
+  --color-green-active: #{$color-green-active};
   --color-red: #{$color-red};
   --color-white: #{$color-white};
   --color-grey-medium: #{$color-grey-medium};
@@ -17,7 +21,7 @@ $color-grey-darker: hsl(187, 24%, 22%);
 
   --font-family: 'Karla', sans-serif;
 
-  --container-padding-xs: 20px;
+  --container-padding-xs: 15px;
   --container-padding-md: 30px;
   --container-padding-lg: 40px;
   --container-padding-xl: 50px;
