@@ -60,11 +60,12 @@
   &__name {
     grid-area: name;
     margin-bottom: 26px;
+
     @include respond(lg) {
       margin: 0;
     }
   }
-  &__last {
+  &__last-name {
     grid-area: last;
     margin-bottom: 26px;
     @include respond(lg) {
@@ -80,22 +81,17 @@
   }
   &__query {
     grid-area: query;
-    margin-bottom: 10px;
   }
   &__message {
     grid-area: message;
 
-    margin-bottom: 38px;
+    margin-bottom: 8px;
     @include respond(lg) {
-      margin-bottom: 12px;
+      // margin-bottom: 12px;
     }
   }
   &__consent {
     grid-area: consent;
-    display: flex;
-    align-items: center;
-    text-align: start;
-    line-height: 1.5;
 
     padding-right: 20px;
     @include respond(lg) {
@@ -117,11 +113,15 @@
       margin-left: 0px;
     }
   }
+  &__consent-inner {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    line-height: 1.5;
+  }
   &__btn {
     grid-area: btn;
-    margin-top: 38px;
-    @include respond(lg) {
-    }
+    margin-top: 15px;
   }
 
   &__query-inner {
@@ -151,15 +151,11 @@
     padding-left: 26px;
     padding-right: 15px;
 
-    margin-bottom: 16px;
-
     @include respond(lg) {
       padding-top: 15px;
       padding-bottom: 15px;
       padding-left: 26px;
       padding-right: 15px;
-
-      margin-bottom: 20px;
     }
     &:hover {
       border: 1px solid var(--color-green-medium);
@@ -175,5 +171,17 @@
     input:checked {
       background-color: red;
     }
+  }
+
+  &__error {
+    display: none;
+    color: var(--color-red);
+    margin-top: 10px;
+    text-align: start;
+  }
+
+  &__error.active {
+    display: block;
+    margin-bottom: 5px;
   }
 }

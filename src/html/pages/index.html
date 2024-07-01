@@ -4,62 +4,72 @@
     <section class="contact-us section">
         <h3 class="contact-us__title">Contact Us</h3>
 
-        <form class="form">
+        <form action="#" class="form" id="form">
             <div class="form__name">
-                <label class="form-label" for="field-1">First Name
+                <label class="form-label" for="name">First Name
                     <span>*</span>
                 </label>
-                <input class="form-input" type="text" required="true" id="field-1">
+                <input class="form-input" type="text" id="name">
+                <span class="form__error" id="name-error">This field is required</span>
             </div>
 
-            <div class="form__last">
-                <label class="form-label" for="field-2">Last Name
+            <div class="form__last-name">
+                <label class="form-label" for="last">Last Name
                     <span>*</span>
                 </label>
-                <input class="form-input" type="text" required="true" id="field-2">
+                <input class="form-input" type="text" id="last">
+                <span class="form__error" id="last-name-error">This field is required</span>
             </div>
 
             <div class="form__email">
-                <label class="form-label" for="field-3">Email Address
+                <label class="form-label" for="email">Email Address
                     <span>*</span>
                 </label>
-                <input class="form-input" type="text" required="true" id="field-3">
+                <input class="form-input" type="text" id="email">
+                <span class="form__error" id="email-error">This field is required</span>
             </div>
 
             <div class="form__query">
-                <label class="form-label-v2" required="true" for="field">Query Type
+                <label class="form-label-v2" for="field">Query Type
                     <span>*</span>
                 </label>
 
                 <div class="form__query-inner">
                     <div class="form__query-item">
-                        <input type="radio" id="field-4" name="query">
-                        <label for="field-4">General Enquiry</label>
+                        <input type="radio" id="general-enquiry" name="query">
+                        <label for="general-enquiry">General Enquiry</label>
                     </div>
 
                     <div class="form__query-item">
-                        <input type="radio" id="field-5" name="query">
-                        <label for="field-5">Support Request</label>
+                        <input type="radio" id="support-request" name="query">
+                        <label for="support-request">Support Request</label>
                     </div>
                 </div>
+                <span class="form__error" id="query-error">Please select aquery type</span>
             </div>
 
             <div class="form__message">
                 <label class="form-label" for="message">Message
                     <span>*</span>
                 </label>
-                <textarea class="form-textarea" required="true" name="message" id="message" rows="3"></textarea>
+                <textarea class="form-textarea" name="message" id="message" rows="3"></textarea>
+                <span class="form__error" id="message-error">This field is required</span>
             </div>
 
             <div class="form__consent">
-                <input type="checkbox" id="consent">
-                <label for="consent">
-                    I consent to being concacted by the team
-                    <span>*</span>
-                </label>
+                <div class="form__consent-inner">
+                    <input type="checkbox" id="consent">
+                    <label for="consent">
+                        I consent to being concacted by the team
+                        <span>*</span>
+                    </label>
+                </div>
+
+                <span class="form__error" id="consent-error">To submit this form, please consent to being
+                    contacted</span>
             </div>
-            <div class="form__btn">
-                <button class="btn">Submit</button>
+            <div class="form__btn" id="form-btn">
+                <button type="submit" class="btn">Submit</button>
             </div>
         </form>
     </section>
