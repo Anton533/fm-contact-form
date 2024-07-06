@@ -6,12 +6,14 @@ $color-grey-medium: #959c99;
 $color-grey-darker: hsl(187, 24%, 22%);
 $color-green-darker: #103f36;
 $color-green-active: #6e9c90;
+$color-green-checked: #e0f1e7;
 
 :root {
   --color-green-lighter: #{$color-green-lighter};
   --color-green-medium: #{$color-green-medium};
   --color-green-darker: #{$color-green-darker};
   --color-green-active: #{$color-green-active};
+  --color-green-checked: #{$color-green-checked};
   --color-red: #{$color-red};
   --color-white: #{$color-white};
   --color-grey-medium: #{$color-grey-medium};

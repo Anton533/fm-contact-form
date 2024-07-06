@@ -1,0 +1,248 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'name name'
+    'last last'
+    'email email'
+    'query query'
+    'message message'
+    'consent consent'
+    'btn btn';
+
+  @include respond(lg) {
+    column-gap: 15px;
+    row-gap: 26px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'name last'
+      'email email'
+      'query query'
+      'message message'
+      'consent consent'
+      'btn btn';
+  }
+}
+
+.form {
+  &__title {
+    grid-area: title;
+  }
+  &__name {
+    grid-area: name;
+    margin-bottom: 26px;
+
+    @include respond(lg) {
+      margin: 0;
+    }
+  }
+  &__last-name {
+    grid-area: last;
+    margin-bottom: 26px;
+    @include respond(lg) {
+      margin: 0;
+    }
+  }
+  &__email {
+    grid-area: email;
+    margin-bottom: 26px;
+    @include respond(lg) {
+      margin: 0;
+    }
+  }
+  &__query {
+    grid-area: query;
+  }
+  &__message {
+    grid-area: message;
+
+    margin-bottom: 34px;
+    @include respond(lg) {
+      // margin-bottom: 8px;
+    }
+  }
+  &__consent {
+    grid-area: consent;
+
+    padding-right: 20px;
+    @include respond(lg) {
+      padding-right: 0;
+    }
+    input {
+      width: 23px;
+      height: 23px;
+      margin-left: 3px;
+      margin-right: 18px;
+      @include respond(lg) {
+        width: 18px;
+        height: 18px;
+        margin-left: 4px;
+        margin-right: 17px;
+      }
+    }
+    span {
+      margin-left: 0px;
+    }
+  }
+
+  &__consent-inner {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    line-height: 1.5;
+  }
+
+  &__consent-input {
+    display: none;
+  }
+
+  &__consent-input:checked + label {
+    &::before {
+      background-image: url(/img/icon-checkbox-check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      border-color: transparent;
+    }
+  }
+
+  &__consent-label {
+    display: flex;
+    align-items: center;
+    flex: 0 0 100%;
+
+    margin-top: 2px;
+    margin-left: 2px;
+
+    .required {
+      margin-left: 2px;
+    }
+  }
+  &__consent-label::before {
+    content: '';
+    flex: 0 0 18px;
+    height: 18px;
+    border: 1px solid var(--color-grey-medium);
+    margin-right: 20px;
+  }
+
+  &__btn {
+    grid-area: btn;
+    margin-top: 38px;
+    @include respond(lg) {
+      margin-top: 15px;
+    }
+  }
+
+  &__query-inner {
+    margin-bottom: 26px;
+    @include respond(lg) {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 0;
+    }
+    input {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__query-item {
+    display: flex;
+    align-items: center;
+
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1px solid var(--color-grey-medium);
+    background-color: #fff;
+    width: 100%;
+
+    padding-top: 14px;
+    padding-bottom: 13px;
+    padding-left: 26px;
+    padding-right: 15px;
+
+    margin-bottom: 11px;
+
+    @include respond(lg) {
+      padding-top: 13px;
+      padding-bottom: 12px;
+      padding-left: 26px;
+      padding-right: 15px;
+      margin-bottom: 0;
+    }
+    &:hover {
+      border: 1px solid var(--color-green-medium);
+      cursor: pointer;
+    }
+
+    input {
+      margin-right: 14px;
+    }
+    input:checked {
+      background-color: red;
+    }
+  }
+
+  &__query-item.checked {
+    border: 1px solid var(--color-green-medium);
+    background-color: var(--color-green-checked);
+  }
+
+  &__query-input {
+    display: none;
+  }
+  &__query-input:checked + label {
+    &::before {
+      background-image: url(/img/icon-radio-selected.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+      border-color: transparent;
+    }
+  }
+
+  &__query-label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  &__query-label-text {
+    flex: 0 0 100%;
+    margin-left: 10px;
+  }
+
+  &__query-label::before {
+    content: '';
+    flex: 0 0 20px;
+    height: 20px;
+    border: 1px solid var(--color-grey-medium);
+    border-radius: 50%;
+  }
+
+  &__query-label::after {
+    content: '';
+    position: absolute;
+  }
+
+  &__error {
+    display: none;
+    color: var(--color-red);
+    margin-top: 10px;
+    text-align: start;
+  }
+
+  &__error.active {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.form__query-input:checked {
+  .form__query-item {
+    border: 1px solid var(--color-green-medium);
+  }
+}

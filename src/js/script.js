@@ -29,11 +29,19 @@ form.addEventListener('submit', (e) => {
 
   const generalEnquiry = document.getElementById('general-enquiry').checked;
   const supportRequest = document.getElementById('support-request').checked;
+
   if (generalEnquiry || supportRequest) {
     document.getElementById('query-error').classList.remove('active');
   } else {
     document.getElementById('query-error').classList.add('active');
   }
+
+  const successMessage = document.getElementById('success-message');
+  if (!successMessage) return;
+  if (name !== '' && last !== '' && email !== '' && message !== '' && consent && (generalEnquiry || supportRequest)) {
+    successMessage.classList.add('show');
+  }
+  setTimeout(() => successMessage.classList.remove('show'), 3000);
 });
 
 function toggleError(field, id) {
@@ -44,3 +52,16 @@ function toggleError(field, id) {
     document.getElementById(id).classList.remove('active');
   }
 }
+
+const generalEnquiry = document.getElementById('general-enquiry');
+const supportRequest = document.getElementById('support-request');
+
+generalEnquiry.addEventListener('click', () => {
+  document.getElementById('general').classList.add('checked');
+  document.getElementById('support').classList.remove('checked');
+});
+
+supportRequest.addEventListener('click', () => {
+  document.getElementById('support').classList.add('checked');
+  document.getElementById('general').classList.remove('checked');
+});

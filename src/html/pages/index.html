@@ -1,13 +1,26 @@
 @@include("header.html")
 
 <div class="container">
+
+
     <section class="contact-us section">
+        <div class="success-message" id="success-message">
+            <div class="success-message__title">
+                <img src="/img/icon-success-check.svg" alt="">
+                <span>Message Sent!</span>
+            </div>
+
+            <div class="success-message__text">
+                Thenks for completing yhe form. We'll be in touch soon!
+            </div>
+        </div>
+
         <h3 class="contact-us__title">Contact Us</h3>
 
         <form action="#" class="form" id="form">
             <div class="form__name">
                 <label class="form-label" for="name">First Name
-                    <span>*</span>
+                    <span class="required">*</span>
                 </label>
                 <input class="form-input" type="text" id="name">
                 <span class="form__error" id="name-error">This field is required</span>
@@ -15,7 +28,7 @@
 
             <div class="form__last-name">
                 <label class="form-label" for="last">Last Name
-                    <span>*</span>
+                    <span class="required">*</span>
                 </label>
                 <input class="form-input" type="text" id="last">
                 <span class="form__error" id="last-name-error">This field is required</span>
@@ -23,7 +36,7 @@
 
             <div class="form__email">
                 <label class="form-label" for="email">Email Address
-                    <span>*</span>
+                    <span class="required">*</span>
                 </label>
                 <input class="form-input" type="text" id="email">
                 <span class="form__error" id="email-error">This field is required</span>
@@ -31,18 +44,22 @@
 
             <div class="form__query">
                 <label class="form-label-v2" for="field">Query Type
-                    <span>*</span>
+                    <span class="required">*</span>
                 </label>
 
                 <div class="form__query-inner">
-                    <div class="form__query-item">
-                        <input type="radio" id="general-enquiry" name="query">
-                        <label for="general-enquiry">General Enquiry</label>
+                    <div class="form__query-item" id="general">
+                        <input class="form__query-input" type="radio" id="general-enquiry" name="query">
+                        <label class="form__query-label" for="general-enquiry">
+                            <span class="form__query-label-text">General Enquiry</span>
+                        </label>
                     </div>
 
-                    <div class="form__query-item">
-                        <input type="radio" id="support-request" name="query">
-                        <label for="support-request">Support Request</label>
+                    <div class="form__query-item" id="support">
+                        <input class="form__query-input" type="radio" id="support-request" name="query">
+                        <label class="form__query-label" for="support-request">
+                            <span class="form__query-label-text">Support Request</span>
+                        </label>
                     </div>
                 </div>
                 <span class="form__error" id="query-error">Please select aquery type</span>
@@ -50,7 +67,7 @@
 
             <div class="form__message">
                 <label class="form-label" for="message">Message
-                    <span>*</span>
+                    <span class="required">*</span>
                 </label>
                 <textarea class="form-textarea" name="message" id="message" rows="3"></textarea>
                 <span class="form__error" id="message-error">This field is required</span>
@@ -58,10 +75,12 @@
 
             <div class="form__consent">
                 <div class="form__consent-inner">
-                    <input type="checkbox" id="consent">
-                    <label for="consent">
-                        I consent to being concacted by the team
-                        <span>*</span>
+                    <input class="form__consent-input" type="checkbox" id="consent">
+                    <label class="form__consent-label" for="consent">
+                        <div>
+                            I consent to being concacted by the team
+                            <span class="required">*</span>
+                        </div>
                     </label>
                 </div>
 
