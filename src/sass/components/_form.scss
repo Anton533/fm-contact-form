@@ -58,7 +58,7 @@
 
     margin-bottom: 34px;
     @include respond(lg) {
-      // margin-bottom: 8px;
+      margin-bottom: 7px;
     }
   }
   &__consent {
@@ -111,8 +111,8 @@
     align-items: center;
     flex: 0 0 100%;
 
-    margin-top: 2px;
-    margin-left: 2px;
+    margin-top: 3px;
+    margin-left: 3px;
 
     .required {
       margin-left: 2px;
@@ -130,7 +130,7 @@
     grid-area: btn;
     margin-top: 38px;
     @include respond(lg) {
-      margin-top: 15px;
+      margin-top: 14px;
     }
   }
 
@@ -212,7 +212,7 @@
 
   &__query-label-text {
     flex: 0 0 100%;
-    margin-left: 10px;
+    margin-left: 8px;
   }
 
   &__query-label::before {
